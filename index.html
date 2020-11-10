@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Muse Design Studio 🦸‍♀️</title>
+    <style>
+      body {
+        margin: 0 auto;
+        padding: 0;
+        background: lightgrey;
+      }
+
+      .container {
+        text-align: center;
+        padding: 20px 30px;
+        max-width: 100%;
+        background: linear-gradient(#ffff, #32525b);
+        margin: 20px 50px;
+        border-radius: 30px;
+      }
+      span {
+        font-size: 35px;
+        border: 2px solid #67949d;
+        padding: 5px;
+      }
+      sub {
+        font-size: 20px;
+      }
+      p {
+        font-size: 30px;
+        line-height: 1.8;
+      }
+      strong {
+        font-size: 40px;
+        font-weight: 900;
+      }
+
+      button {
+        padding: 10px 30px;
+        font-size: 25px;
+        border: 1px solid #67949d;
+        border-radius: 30px;
+        cursor: pointer;
+        margin: 20px;
+      }
+
+      button:hover {
+        background: lightslategray;
+        color: white;
+        box-shadow: 2px 4px rgba(110, 109, 109, 0.9);
+        transition: all 200ms ease-in-out;
+      }
+      a {
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+        font-size: 30px;
+        font-weight: 700;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .available {
+        color: white;
+        font-size: 50px;
+      }
+
+      img {
+        max-width: 250px;
+        border-radius: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1><span>The Muse</span><sub>Design Studio 🦸‍♀️ </sub></h1>
+      <h2><em>Helping you scale your business online.</em></h2>
+      <p>
+        <strong>Hello;</strong> My name is Joy, a Front End/UI developer.
+        <br />
+        I’m passionate about creating thoughtful interactive digital products
+        using design, content and technology.
+      </p>
+      <hr />
+      <h2>How I can Help...</h2>
+      <div>
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/002/328/original/tech.jpg?1598982526"
+          alt=""
+        />
+        <p>
+          Tailor make digital solutions that communicate your brand identity to
+          the audience.
+        </p>
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/002/327/original/user.jpg?1598982512"
+          alt=""
+        />
+
+        <p>
+          Create engaging online experience, achieved through user-centric
+          design.
+        </p>
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/002/329/original/brand.jpg?1598982557"
+          alt=""
+        />
+
+        <p>
+          Transform your business one design at a time using the latest
+          technologies.
+        </p>
+      </div>
+
+      <h2 class="available">I’m available for you!</h2>
+      <p>
+        I love exploring new cuisines🥘 reading 📚 and music 🎶 <br />
+        Do you have a project that involves either? Let’s have a chat, ready to
+        help!
+      </p>
+      <button>Let's Chat</button>
+      <footer>
+        <a
+          href="https://www.linkedin.com/in/joy-muthoni-253a6b6b/"
+          target="_blank"
+          >LinkedIn</a
+        >
+        <a href="https://embracingthepieces.wordpress.com/" target="_blank"
+          >Blog</a
+        >
+        <a href="https://www.instagram.com/muthoni_muchai/" target="_blank"
+          >Instagram</a
+        >
+      </footer>
+    </div>
+
+    <script>
+      function chatNow() {
+        let greet = prompt("How are you today?");
+        let firstName = prompt("What's your name?");
+        let fancy = prompt("Is it food, books or music that you fancy?");
+        let heading = document.querySelector(".available");
+
+        if (fancy === "food") {
+          alert("Hi " + firstName + ", Welcome! Food is Life 🥳 ");
+        }
+
+        if (fancy === "books") {
+          alert("Hi " + firstName + ", Welcome! Books are wealth 🙌 ");
+        }
+        if (fancy === "music") {
+          heading.innerHTML =
+            "Hi " + firstName + ", Welcome! Music for the soul, Yes! 🕺 ";
+        } else {
+          heading.innerHTML =
+            "Hi " +
+            firstName +
+            ", Welcome! Let's have a chat and create your Muse 😉 ";
+        }
+      }
+
+      let chatButton = document.querySelector("button");
+      chatButton.addEventListener("click", chatNow);
+    </script>
+  </body>
+</html>
